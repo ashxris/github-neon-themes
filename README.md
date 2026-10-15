@@ -17,14 +17,34 @@ A lightweight, Discord-inspired **Manifest V3 Chrome Extension** that transforms
   - 🟣 **Cyber Purple** — Midnight violet canvas with neon magenta & purple highlights.
   - 🎃 **Halloween Blood** — Pitch charcoal-black canvas with blood-red & pumpkin-orange glow.
   - ⚪ **Default (Off)** — Instantly restores your original GitHub appearance.
-- **🎚️ Live Glow & Glitter Intensity Slider (`0%` – `200%`):**
-  - Dial it down to `0%` for a clean, flat dark-matte aesthetic, keep it at `100%` for balanced neon, or push it to `200%` for maximum bloom and twinkling starlight.
 - **⚡ Zero Flash of Unstyled Content (FOUC):**
   - Injected at `document_start` and resilient against GitHub's Turbo/PJAX client-side routing.
 - **🟩 Themed Contribution Graph & Status Badges:**
   - Profile contribution calendars and Issue/PR status badges dynamically adapt and glow in your active theme's palette.
 - **💻 Code Syntax Highlighting Preserved:**
   - `<pre>`, `<code>`, and `.blob-code` tokens remain 100% untouched in GitHub's native dark syntax theme for effortless readability.
+
+---
+
+## 🔧 Installation (Load Unpacked in Chrome)
+
+1. **Clone or download this repo:**
+   ```bash
+   git clone https://github.com/ashxris/github-neon-themes.git
+   ```
+   Or click **Code → Download ZIP** and unzip it.
+
+2. Open Chrome and go to `chrome://extensions/`.
+
+3. Enable **Developer mode** (toggle in the top-right corner).
+
+4. Click **Load unpacked** and select the `github-neon-themes/` folder.
+
+5. (Optional) Click the **puzzle piece 🧩** in the Chrome toolbar → pin **GitHub Neon Themes** for quick access.
+
+6. Visit [github.com](https://github.com), open the extension popup, and pick a theme.
+
+> To update later, pull the latest changes and click the **↻ Reload** button on the extension card in `chrome://extensions/`.
 
 ---
 
