@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Neon Themes",
+  "version": "1.0.0",
+  "description": "Discord-inspired dark neon themes for GitHub with subtle glowing accents.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "GitHub Neon Themes"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*",
+        "https://*.github.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["themes.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    :root {
+      --popup-accent: #00e5ff;
+      --popup-glow: rgba(0, 229, 255, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 290px;
+      background-color: #090b10;
+      color: #f0f6fc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      padding: 16px;
+      border: 1px solid #1f2430;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #1f2430;
+    }
+
+    .title {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--popup-accent);
+      box-shadow: 0 0 8px var(--popup-accent);
+      transition: all 0.25s ease;
+    }
+
+    .badge {
+      font-size: 10px;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #8b949e;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #8b949e;
+      margin-bottom: 6px;
+    }
+
+    .select-wrapper {
+      position: relative;
+      margin-bottom: 14px;
+    }
+
+    select {
+      width: 100%;
+      appearance: none;
+      background-color: #11151f;
+      color: #f0f6fc;
+      border: 1px solid var(--popup-accent);
+      border-radius: 8px;
+      padding: 10px 32px 10px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 0 0 10px var(--popup-glow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    select:hover, select:focus {
+      box-shadow: 0 0 14px var(--popup-glow);
+    }
+
+    .select-arrow {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 10px;
+      color: var(--popup-accent);
+    }
+
+    .swatches {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .swatch {
+      flex: 1;
+      height: 6px;
+      border-radius: 4px;
+      background: #21262d;
+      transition: background 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .footer {
+      font-size: 11px;
+      color: #6e7681;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">
+      <span class="status-dot" id="statusDot"></span>
+      <span>GitHub Neon UI</span>
+    </div>
+    <span class="badge" id="statusBadge">Active</span>
+  </div>
+
+  <label for="themeSelect">Select Theme</label>
+  <div class="select-wrapper">
+    <select id="themeSelect">
+      <option value="off">Default (GitHub Normal)</option>
+      <option value="neon-crimson">🔴 Neon Crimson</option>
+      <option value="matrix-green">🟢 Matrix Green</option>
+      <option value="electric-blue">🔵 Electric Blue</option>
+      <option value="cyber-purple">🟣 Cyber Purple</option>
+      <option value="halloween-blood">🎃 Halloween Blood</option>
+    </select>
+    <span class="select-arrow">▼</span>
+  </div>
+
+  <div class="swatches">
+    <div class="swatch" id="sw1"></div>
+    <div class="swatch" id="sw2"></div>
+    <div class="swatch" id="sw3"></div>
+    <div class="swatch" id="sw4"></div>
+  </div>
+
+  <div class="footer">Applies instantly to open GitHub tabs</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
