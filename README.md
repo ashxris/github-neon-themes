@@ -26,7 +26,9 @@ A lightweight, Discord-inspired **Manifest V3 Chrome Extension** that transforms
 
 ---
 
-## 🔧 Installation (Load Unpacked in Chrome)
+## 🔧 Installation
+
+### Method 1: Chrome Extension (Load Unpacked in Chrome)
 
 1. **Clone or download this repo:**
    ```bash
@@ -46,6 +48,18 @@ A lightweight, Discord-inspired **Manifest V3 Chrome Extension** that transforms
 
 > To update later, pull the latest changes and click the **↻ Reload** button on the extension card in `chrome://extensions/`.
 
+### Method 2: Tampermonkey Userscript (Chrome / Edge / Firefox / Safari)
+
+No Developer mode needed — great if you already use Tampermonkey.
+
+1. **Install Tampermonkey:** get it from [tampermonkey.net](https://www.tampermonkey.net/) and pin it to your toolbar.
+
+2. **Add the script:** open the Tampermonkey dashboard → click **+ (Create a new script)** → delete the template → copy-paste the full contents of `github-neon-themes.user.js` from this repo → press **Ctrl+S / Cmd+S** to save. Make sure the script toggle is **Enabled**.
+
+3. **Use it:** visit [github.com](https://github.com) and pick a theme from the floating dropdown (bottom-right) or via **Tampermonkey icon → GitHub Neon Themes → theme name**. Your choice syncs across tabs automatically.
+
+> To update later, just re-copy the latest `github-neon-themes.user.js` over your installed script and save again.
+
 ---
 
 ## 📂 Project Structure
@@ -53,8 +67,10 @@ A lightweight, Discord-inspired **Manifest V3 Chrome Extension** that transforms
 ```text
 github-neon-themes/
 ├── manifest.json   # Chrome Extension Manifest V3 configuration
-├── content.js      # Injects theme attributes & syncs live slider multiplier
+├── content.js      # Injects theme attributes & syncs storage-driven theme
 ├── themes.css      # Primer CSS variable overrides, dynamic calc() glows & glitter layers
 ├── popup.html      # Discord-inspired extension popup UI
 ├── popup.js        # Popup state management & chrome.storage.sync broadcaster
+├── github-neon-themes.user.js # Tampermonkey userscript (Method 2 install)
 └── README.md       # Project documentation
+```
