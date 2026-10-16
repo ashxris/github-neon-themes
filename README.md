@@ -50,15 +50,19 @@ A lightweight, Discord-inspired **Manifest V3 Chrome Extension** that transforms
 
 ### Method 2: Tampermonkey Userscript (Chrome / Edge / Firefox / Safari)
 
-No Developer mode needed — great if you already use Tampermonkey.
+No Developer mode needed — great if you already use Tampermonkey or Violentmonkey.
 
-1. **Install Tampermonkey:** get it from [tampermonkey.net](https://www.tampermonkey.net/) and pin it to your toolbar.
+> **⚡ 1-click install:** have Tampermonkey / Violentmonkey installed, then click this link — you'll get an Install screen immediately:
+>
+> 👉 **[Install GitHub Neon Themes](https://raw.githubusercontent.com/ashxris/github-neon-themes/refs/heads/main/github-neon-themes.user.js)**
 
-2. **Add the script:** open the Tampermonkey dashboard → click **+ (Create a new script)** → delete the template → copy-paste the full contents of `github-neon-themes.user.js` from this repo → press **Ctrl+S / Cmd+S** to save. Make sure the script toggle is **Enabled**.
+1. **Install a userscript manager:** get [Tampermonkey](https://www.tampermonkey.net/) (or [Violentmonkey](https://violentmonkey.github.io/)) and pin it to your toolbar.
+
+2. **Add the script:** click the **Install** link above and hit **Install** on the Tampermonkey/Violentmonkey screen. (Manual fallback: dashboard → **+ new script** → paste contents of `github-neon-themes.user.js` → save, toggle **Enabled**.)
 
 3. **Use it:** visit [github.com](https://github.com) and pick a theme from the floating dropdown (bottom-right) or via **Tampermonkey icon → GitHub Neon Themes → theme name**. Your choice syncs across tabs automatically.
 
-> To update later, just re-copy the latest `github-neon-themes.user.js` over your installed script and save again.
+> To update later, Tampermonkey auto-checks the raw URL for new versions — or just click the Install link above again to re-install manually.
 
 ---
 
